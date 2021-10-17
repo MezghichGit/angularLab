@@ -1,0 +1,18 @@
+<h4>{{formation}}</h4>
+
+<h3>Nous avons appris</h3>
+<ul>
+  <li *ngFor="let d of tab">{{d|first}}</li>
+</ul>
+
+<button (click)="info()" class="btn btn-primary">cliquer ici</button>
+<br/><br/>
+<table class="table" align="center" border="1">
+  <tr><th>ID</th><th>NOM</th><th>VH</th></tr>
+  <tr *ngFor="let c of mesCours">
+  <td>{{c.id}}</td>
+  <td>{{c.nom}}</td>
+  <td>{{c.vh}}</td>
+  </tr>
+</table>
+<img *ngIf="test==false" width="200px" [src]="srcImage"/>
